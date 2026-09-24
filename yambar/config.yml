@@ -1,0 +1,404 @@
+# yambar config for Hyprland
+# Icons: Hack Nerd Font (private-use glyphs) - Font Awesome + Material Design
+
+bar:
+  location: top
+  height: 60
+  layer: top
+  font: FiraCode Nerd Font:pixelsize=20
+  background: 1a1b26c8
+  foreground: c9cbe0ff
+  left-spacing: 6
+  right-spacing: 6
+  left-margin: 12
+  right-margin: 12
+  border:
+    bottom-width: 5
+    color: 7dcfff59
+
+  left:
+    # workspaces (script module, driven by hyprctl)
+    - script:
+        path: /home/otiko/.config/yambar/scripts/hypr-ws.sh
+        content:
+          list:
+            spacing: 2
+            items:
+              - map:
+                  conditions:
+                    'ws1 != "" && focused == 1':
+                      string:
+                        text: "{ws1}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 1
+                    'ws1 != ""':
+                      string:
+                        text: "{ws1}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 1
+              - map:
+                  conditions:
+                    'ws2 != "" && focused == 2':
+                      string:
+                        text: "{ws2}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 2
+                    'ws2 != ""':
+                      string:
+                        text: "{ws2}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 2
+              - map:
+                  conditions:
+                    'ws3 != "" && focused == 3':
+                      string:
+                        text: "{ws3}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 3
+                    'ws3 != ""':
+                      string:
+                        text: "{ws3}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 3
+              - map:
+                  conditions:
+                    'ws4 != "" && focused == 4':
+                      string:
+                        text: "{ws4}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 4
+                    'ws4 != ""':
+                      string:
+                        text: "{ws4}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 4
+              - map:
+                  conditions:
+                    'ws5 != "" && focused == 5':
+                      string:
+                        text: "{ws5}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 5
+                    'ws5 != ""':
+                      string:
+                        text: "{ws5}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 5
+              - map:
+                  conditions:
+                    'ws6 != "" && focused == 6':
+                      string:
+                        text: "{ws6}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 6
+                    'ws6 != ""':
+                      string:
+                        text: "{ws6}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 6
+              - map:
+                  conditions:
+                    'ws7 != "" && focused == 7':
+                      string:
+                        text: "{ws7}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 7
+                    'ws7 != ""':
+                      string:
+                        text: "{ws7}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 7
+              - map:
+                  conditions:
+                    'ws8 != "" && focused == 8':
+                      string:
+                        text: "{ws8}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 8
+                    'ws8 != ""':
+                      string:
+                        text: "{ws8}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 8
+              - map:
+                  conditions:
+                    'ws9 != "" && focused == 9':
+                      string:
+                        text: "{ws9}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 9
+                    'ws9 != ""':
+                      string:
+                        text: "{ws9}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 9
+              - map:
+                  conditions:
+                    'ws10 != "" && focused == 10':
+                      string:
+                        text: "{ws10}"
+                        foreground: "12141fff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "7dcfffff"}}
+                        on-click: hyprctl dispatch workspace 10
+                    'ws10 != ""':
+                      string:
+                        text: "{ws10}"
+                        foreground: "a9b1d6ff"
+                        left-margin: 4
+                        right-margin: 4
+                        deco: {background: {color: "00000055"}}
+                        on-click: hyprctl dispatch workspace 10
+
+  center:
+    # focused window title
+    - script:
+        path: /home/otiko/.config/yambar/scripts/hypr-title.sh
+        content:
+          map:
+            conditions:
+              'title == ""':
+                empty: {}
+            default:
+              string:
+                text: "{title}"
+                max: 50
+                foreground: "bcc4e8ff"
+                deco:
+                  underline: {size: 1, color: "7dcfff4d"}
+
+  right:
+    # now playing (playerctl, MPRIS)
+    - script:
+        path: /home/otiko/.config/yambar/scripts/hypr-media.sh
+        content:
+          map:
+            conditions:
+              'status == Stopped || title == ""':
+                empty: {}
+            default:
+              string:
+                text: "\uF001  {artist} - {title}"
+                max: 36
+                foreground: "7aa2f7ff"
+
+    # audio volume (ALSA mixer)
+    - alsa:
+        card: hw:PCH
+        mixer: Master
+        content:
+          map:
+            conditions:
+              '~online':
+                empty: {}
+              'muted':
+                string:
+                  text: "\uF04CD  {percent}%"
+                  foreground: "f5494dff"
+            default:
+              list:
+                spacing: 4
+                items:
+                  - ramp:
+                      tag: percent
+                      items:
+                        - string: {text: "\uF04D0"}
+                        - string: {text: "\uF04D2"}
+                        - string: {text: "\uF04D1"}
+                  - string:
+                      text: " {percent}%"
+
+    # network
+    - network:
+        poll-interval: 10000
+        content:
+          map:
+            conditions:
+              'name == lo':
+                empty: {}
+              'state == down || state == "lower layers down" || state == dormant':
+                string:
+                  text: "{name} \uF0493"
+                  foreground: "555a73ff"
+              'ssid != ""':
+                string:
+                  text: "{ssid} \uF0A69 {quality}%"
+                  foreground: "7dcfffff"
+              'state == up':
+                string:
+                  text: "{name} \uF0491"
+                  foreground: "7aa2f7ff"
+            default:
+              empty: {}
+
+    # keyboard layout + cpu temperature
+    - script:
+        path: /home/otiko/.config/yambar/scripts/hypr-stats.sh
+        content:
+          list:
+            spacing: 10
+            items:
+              - map:
+                  conditions:
+                    'layout == ""':
+                      empty: {}
+                  default:
+                    string:
+                      text: "\uF11C  {layout}"
+                      foreground: "a9b1d6ff"
+              - map:
+                  conditions:
+                    'temp == 0':
+                      empty: {}
+                  default:
+                    list:
+                      spacing: 0
+                      items:
+                        - ramp:
+                            tag: temp
+                            items:
+                              - string: {text: "\uF2CB"}
+                              - string: {text: "\uF2CA"}
+                              - string: {text: "\uF2C9"}
+                              - string: {text: "\uF2C8"}
+                              - string: {text: "\uF2C7"}
+                        - string:
+                            text: " {temp}°C"
+                            foreground: "f0932bff"
+
+    # cpu (total usage)
+    - cpu:
+        poll-interval: 2000
+        content:
+          map:
+            conditions:
+              'id < 0':
+                string:
+                  text: "\uF0193  {cpu}%"
+                  foreground: "7dcfffff"
+            default:
+              empty: {}
+
+    # memory
+    - mem:
+        poll-interval: 2000
+        content:
+          string:
+            text: "\uF0057  {percent_used}%"
+            foreground: "b089e6ff"
+
+    # backlight
+    - backlight:
+        name: intel_backlight
+        content:
+          list:
+            spacing: 0
+            items:
+              - ramp:
+                  tag: percent
+                  items:
+                    - string: {text: "\uF0060"}
+                    - string: {text: "\uF0062"}
+                    - string: {text: "\uF0064"}
+                    - string: {text: "\uF006A"}
+              - string:
+                  text: " {percent}%"
+                  foreground: "90b1b1ff"
+
+    # battery
+    - battery:
+        name: BAT1
+        poll-interval: 30000
+        content:
+          map:
+            conditions:
+              'state == full':
+                string:
+                  text: "\uF240  {capacity}%"
+                  foreground: "7dcfffff"
+              'state == charging':
+                string:
+                  text: "\uF0116  {capacity}%"
+                  foreground: "7aa2f7ff"
+              'state == discharging && capacity <= 20':
+                string:
+                  text: "{capacity}%  \uF244"
+                  foreground: "f5494dff"
+            default:
+              list:
+                spacing: 4
+                items:
+                  - ramp:
+                      tag: capacity
+                      items:
+                        - string: {text: "\uF244"}
+                        - string: {text: "\uF243"}
+                        - string: {text: "\uF242"}
+                        - string: {text: "\uF241"}
+                        - string: {text: "\uF240"}
+                  - string:
+                      text: " {capacity}%"
+
+    # clock
+    - clock:
+        date-format: "%a %d %b"
+        time-format: "%H:%M"
+        content:
+          string:
+            text: "\uF017  {date}  {time}"
+            foreground: "7dcfffff"
